@@ -16,189 +16,207 @@
 
 @header-nav-bg: #f5f5f5;
 
-
 body {
-    background: @page-background;
+  background: @page-background;
 }
 
 .container {
-    width: 970px;
-    background: @background;
-    border-left: 1px solid darken(@page-background, 6%);
-    border-right: 1px solid darken(@page-background, 6%);
-    box-shadow: 0 0 4px darken(@page-background, 4%);
+  width: 970px;
+  background: @background;
+  border-left: 1px solid darken(@page-background, 6%);
+  border-right: 1px solid darken(@page-background, 6%);
+  box-shadow: 0 0 4px darken(@page-background, 4%);
 }
 
 .header {
-    height: 130px;
-    border-bottom: 4px solid lighten(@grey, 20%);
+  height: 130px;
+  border-bottom: 4px solid lighten(@grey, 20%);
 
-    h1.logo {
-        position: absolute;
-        margin: 30px 0 0 50px;
-        padding: 0;
-        font-size: 30px;
-        font-weight: normal;
+  h1.logo {
+    position: absolute;
+    margin: 30px 0 0 50px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  ul.nav {
+    display: block;
+    float: right;
+    margin: 98px 0 0 0;
+
+    .corner {
+      float: left;
+      width: 0px;
+      height: 0px;
+      border-left: 28px solid transparent;
+      border-bottom: 28px solid @header-nav-bg;
     }
 
-    ul.nav {
-        display: block;
-        float: right;
-        margin: 98px 0 0 0;
-
-        .corner {
-            float: left;
-            width: 0px;
-            height: 0px;
-            border-left: 28px solid transparent;
-            border-bottom: 28px solid @header-nav-bg;
+    ul.dropdown {
+      display: none;
+      margin: 0 0 0 -35px;
+      li {
+        a {
+          display: block;
+          line-height: 30px;
+          padding-left: 10px;
+          &:hover {
+            text-decoration: none;
+            color: darken(@theme, 10%);
+            background: darken(@header-nav-bg, 5%);
+          }
         }
+      }
+    }
 
+    li {
+      display: block;
+      float: left;
+      width: 130px;
+      height: 28px;
+      background: @header-nav-bg;
+      &:hover {
         .dropdown {
-            display: none;
+          display: block;
         }
-
-        li {
-            display: block;
-            float: left;
-            width: 130px;
-            height: 28px;
-            background: @header-nav-bg;
-        }
-
-        a.nav-link {
-            display: block;
-            text-align: center;
-            width: 124px;
-            padding: 0;
-            line-height: 30px;
-            margin: 0 3px;
-            height: 28px;
-            &:hover {
-                text-decoration: none;
-                color: darken(@theme, 10%);
-                background:darken(@header-nav-bg, 5%);
-            }
-        }
+      }
     }
+
+    a.nav-link {
+      display: block;
+      text-align: center;
+      width: 124px;
+      padding: 0;
+      line-height: 30px;
+      margin: 0 3px;
+      height: 28px;
+      &:hover {
+        text-decoration: none;
+        color: darken(@theme, 10%);
+        background: darken(@header-nav-bg, 5%);
+      }
+    }
+  }
 }
 
 .focus {
-    border-bottom: 4px solid lighten(@grey, 20%);
-    height: 384px;
+  margin: -20px -25px 20px -25px;
+  border-bottom: 4px solid lighten(@grey, 20%);
+  height: 384px;
 
-    img {
-        width: 100%;
-        height: 380px;
-    }
+  img {
+    width: 968px;
+    height: 380px;
+  }
 }
 
 .main {
-    padding: 20px 10px;
+  padding: 20px 10px;
 }
 
 .col-weight {
-    padding: 0 10px;
-    h2 {
-        border-bottom: 1px dashed lighten(@grey,20%);
-        border-top: 1px dashed lighten(@grey,20%);
-        font-weight: normal;
-        font-size: 18px;
-        color: @theme;
-        line-height: 28px;
-        padding: 4px 5px;
-        margin: 0 0 15px 0;
-    }
+  padding: 0 10px;
+  h2 {
+    border-bottom: 1px dashed lighten(@grey, 20%);
+    border-top: 1px dashed lighten(@grey, 20%);
+    font-weight: normal;
+    font-size: 18px;
+    color: @theme;
+    line-height: 28px;
+    padding: 4px 5px;
+    margin: 0 0 15px 0;
+  }
 
-    p {
-        margin: 0 0 5px 0;
-        font-size: 14px;
-        line-height: 20px;
-        color: @content;
-        word-break: keep-all;
-    }
+  p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: @content;
+    word-break: keep-all;
+  }
 
-    .content {
-        height: 254px;
-    }
+  .content {
+    height: 254px;
+  }
 
-    .col-list {
-        padding: 0;
+  .col-list {
+    padding: 0;
 
-        li {
-            display: block;
-            margin-bottom: 10px;
-        }
-        a {
-            display: block;
-            width: 296px;
-            height: 122px;
-            border: 1px solid lighten(@content, 30%);
-        }
-        img {
-            width: 294px;
-            height: 120px;
-        }
+    li {
+      display: block;
+      margin-bottom: 10px;
     }
+    a {
+      display: block;
+      width: 296px;
+      height: 122px;
+      border: 1px solid lighten(@content, 30%);
+    }
+    img {
+      width: 294px;
+      height: 120px;
+    }
+  }
 
 }
 
 .gallery-small {
-    margin: -5px;
-    a {
-        display: block;
-        float: left;
-        height: 78px;
-        width: 91px;
-        margin: 5px;
-    }
-    img {
-        width: 91px;
-        height: 78px;
-    }
+  margin: -5px;
+  a {
+    display: block;
+    float: left;
+    height: 78px;
+    width: 91px;
+    margin: 5px;
+  }
+  img {
+    width: 91px;
+    height: 78px;
+  }
 
 }
 
 .footer {
-    background: @footer-bg;
-    color: @content;
-    padding: 0 15px 20px 15px;
+  background: @footer-bg;
+  color: @content;
+  padding: 0 15px 20px 15px;
 
-    .block {
-        padding-top: 20px;
-    }
+  .block {
+    padding-top: 20px;
+  }
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
-    p.important, p.title {
-        font-family: "Lato Regular";
-    }
+  p.important, p.title {
+    font-family: "Lato Regular";
+  }
 
-    p.title {
-        margin-bottom: 10px;
-    }
+  p.title {
+    margin-bottom: 10px;
+  }
 
-    .link img {
-        opacity: 0.8;
-        &:hover {
-            opacity: 1;
-        }
+  .link img {
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
     }
+  }
 
-    a.icon {
-        display: block;
-        float: left;
-        height: 38px;
-        width: 38px;
-        background: lighten(@content, 20%);
-        border-radius: 19px;
-        margin-right: 10px;
-        margin-top: 5px;
-        text-indent: -9999px;
-        &:hover {
-            background: lighten(@content, 10%);
-        }
+  a.icon {
+    display: block;
+    float: left;
+    height: 38px;
+    width: 38px;
+    background: lighten(@content, 20%);
+    border-radius: 19px;
+    margin-right: 10px;
+    margin-top: 5px;
+    text-indent: -9999px;
+    &:hover {
+      background: lighten(@content, 10%);
     }
+  }
 }
