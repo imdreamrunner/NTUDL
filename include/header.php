@@ -10,12 +10,16 @@
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/fonts.css" />
     <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="lightbox/css/lightbox.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <script src="javascripts/jquery-1.10.2.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="lightbox/js/lightbox.min.js"></script>
 </head>
 <body>
 <div class="container">

@@ -23,7 +23,5 @@
     </div>
 </div>
 </div>
-<script src="javascripts/jquery-1.10.2.min.js"></script>
-<script src="javascripts/bootstrap.min.js"></script>
 </body>
 </html>

@@ -29,36 +29,40 @@
     </div>
     <div class="col-xs-4 col-weight">
         <h2>Gallery</h2>
-        <div class="gallery-small content">
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
-            <a href="#" class="">
-                <img src="images/event3.jpg" />
-            </a>
+        <div id="facebook-gallery" class="gallery-small content">
+            Loading gallery...
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            "url": "gallery/ajax_get_gallery.php",
+            "type": "GET",
+            "success": function(ret) {
+                var $gallery = $("#facebook-gallery");
+                $gallery.html("");
+                for (var i in ret) {
+                    var photo = ret[i];
+                    console.log(photo);
+                    var $photo = $("<a>");
+                    $photo.attr({
+                        "href": photo['source'],
+                        "data-lightbox": "gallery",
+                        "data-title": "<a target='_blank' href='javascript:openNew(\"" + photo['link'] + "\")'>View on Facebook</a>"
+                    });
+                    $photo.html('<img src="' + photo['source'] + '" />');
+                    $gallery.append($photo);
+                }
+            }
+        });
+    });
+
+    function openNew(link) {
+        window.open(link);
+    }
+
+</script>
 
 <?php include 'include/footer.php' ?>
